@@ -1,0 +1,375 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_details_section",
+    "fieldtype": "Section Break",
+    "label": "Vehicle Details",
+    "insert_after": "phone",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_details_section",
+    "collapsible": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_model",
+    "fieldtype": "Data",
+    "label": "Vehicle Model",
+    "insert_after": "vehicle_details_section",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_model"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_year",
+    "fieldtype": "Int",
+    "label": "Vehicle Year",
+    "insert_after": "vehicle_model",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_year"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_company",
+    "fieldtype": "Link",
+    "label": "Vehicle Company",
+    "options": "Vehicle Company",
+    "insert_after": "vehicle_year",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_company"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "fuel_type",
+    "fieldtype": "Link",
+    "label": "Fuel Type",
+    "options": "Fuel Type",
+    "insert_after": "vehicle_company",
+    "module": "crm_customisation",
+    "name": "lead-fuel_type"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "transmission_type",
+    "fieldtype": "Link",
+    "label": "Transmission Type",
+    "options": "Transmission Type",
+    "insert_after": "fuel_type",
+    "module": "crm_customisation",
+    "name": "lead-transmission_type"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "booking_slot",
+    "in_list_view": 1,
+    "fieldtype": "Datetime",
+    "label": "Booking Slot",
+    "insert_after": "transmission_type",
+    "module": "crm_customisation",
+    "name": "lead-booking_slot",
+    "reqd": 1
+  },
+
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_column_break",
+    "fieldtype": "Column Break",
+    "insert_after": "booking_slot",
+    "in_list_view": 1,
+    "module": "crm_customisation",
+    "name": "lead-vehicle_column_break"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_vin",
+    "fieldtype": "Data",
+    "label": "VIN Number",
+    "insert_after": "vehicle_column_break",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_vin"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_colour",
+    "fieldtype": "Data",
+    "label": "Vehicle Colour",
+    "insert_after": "vehicle_vin",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_colour"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "engine_number",
+    "fieldtype": "Data",
+    "label": "Engine Number",
+    "insert_after": "vehicle_colour",
+    "module": "crm_customisation",
+    "name": "lead-engine_number"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "plate_number",
+    "fieldtype": "Data",
+    "label": "Plate Number",
+    "insert_after": "engine_number",
+    "module": "crm_customisation",
+    "name": "lead-plate_number",
+    "in_list_view": 1,
+    "reqd": 1,
+    "in_global_search": 1,
+    "in_standard_filter": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_condition",
+    "fieldtype": "Link",
+    "label": "Vehicle Condition",
+    "options": "Vehicle Condition",
+    "insert_after": "plate_number",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_condition"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "vehicle_services",
+    "fieldtype": "Section Break",
+    "label": "Vehicle Services",
+    "insert_after": "vehicle_condition",
+    "module": "crm_customisation",
+    "name": "lead-vehicle_services",
+    "collapsible": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "services",
+    "fieldtype": "Table",
+    "label": "Services",
+    "insert_after": "vehicle_services",
+    "options": "Services Item",
+    "module": "crm_customisation",
+    "name": "lead-services"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "address_section",
+    "fieldtype": "Section Break",
+    "label": "Address & Contacts",
+    "oldfieldname": "address_section",
+    "insert_after": "services",
+    "oldfieldtype": "Data",
+    "name": "address_section"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "website",
+    "fieldtype": "Data",
+    "label": "Website",
+    "oldfieldname": "country_name",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "website"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "whatsapp_no",
+    "fieldtype": "Data",
+    "label": "Whatsapp",
+    "oldfieldname": "whatsapp_no",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "whatsapp_no"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "phone_ext",
+    "fieldtype": "Data",
+    "label": "Phone Ext.",
+    "oldfieldname": "phone_ext",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "phone_ext"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "company_name",
+    "fieldtype": "Data",
+    "oldfieldname": "company_name",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "company_name"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "annual_revenue",
+    "fieldtype": "Currency",
+    "oldfieldname": "annual_revenue",
+    "oldfieldtype": "Currency",
+    "hidden": 1,
+    "name": "annual_revenue"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "territory",
+    "fieldtype": "Data",
+    "oldfieldname": "territory",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "territory"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "no_of_employees",
+    "fieldtype": "Data",
+    "oldfieldname": "no_of_employees",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "no_of_employees"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "industry",
+    "fieldtype": "Data",
+    "oldfieldname": "industry",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "industry"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "fax",
+    "fieldtype": "Data",
+    "oldfieldname": "fax",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "fax"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "market_segment",
+    "fieldtype": "Data",
+    "oldfieldname": "market_segment",
+    "oldfieldtype": "Data",
+    "hidden": 1,
+    "name": "market_segment"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "qualification_status",
+    "fieldtype": "Select",
+    "oldfieldname": "qualification_status",
+    "oldfieldtype": "Select",
+    "hidden": 1,
+    "name": "qualification_status"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "disabled",
+    "fieldtype": "Check",
+    "oldfieldname": "disabled",
+    "oldfieldtype": "Check",
+    "hidden": 1,
+    "name": "disabled"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "unsubscribed",
+    "fieldtype": "Check",
+    "oldfieldname": "unsubscribed",
+    "oldfieldtype": "Check",
+    "hidden": 1,
+    "name": "unsubscribed"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "blog_subscriber",
+    "fieldtype": "Check",
+    "oldfieldname": "blog_subscriber",
+    "oldfieldtype": "Check",
+    "hidden": 1,
+    "name": "blog_subscriber"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "image",
+    "fieldtype": "Attach Image",
+    "oldfieldname": "image",
+    "oldfieldtype": "Attach Image",
+    "hidden": 1,
+    "name": "image"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "other_info_tab",
+    "fieldtype": "Section Break",
+    "oldfieldname": "other_info_tab",
+    "label": "Company Branch",
+    "oldfieldtype": "Section Break",
+    "collapsible": 1,
+    "name": "other_info_tab"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "oldfieldname": "company",
+    "label": "Company",
+    "oldfieldtype": "Link",
+    "options": "Company",
+    "name": "company",
+    "reqd": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "job_title",
+    "fieldtype": "Data",
+    "oldfieldname": "job_title",
+    "label": "Job Title",
+    "oldfieldtype": "Data",
+    "name": "job_title"
+  },
+  {
+     "doctype": "Custom Field",
+    "dt": "Lead",
+    "fieldname": "mobile_no",
+    "fieldtype": "Data",
+    "oldfieldname": "mobile_no",
+    "label": "Mobile No.",
+    "oldfieldtype": "Data",
+    "name": "mobile_no",
+    "reqd": 1
+
+  }
+]

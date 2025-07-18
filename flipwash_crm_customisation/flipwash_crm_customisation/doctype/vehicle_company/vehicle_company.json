@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-13 22:38:47.207704",
+ "doctype": "DocType",
+ "autoname": "field:vehicle_company",
+ "naming_rule": "By fieldname",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_9icr",
+  "vehicle_company"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_9icr",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Company"
+  },
+  {
+   "fieldname": "vehicle_company",
+   "fieldtype": "Data",
+   "label": "Vehicle Company"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-13 22:38:47.207704",
+ "modified_by": "Administrator",
+ "module": "Flipwash Crm Customisation",
+ "name": "Vehicle Company",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

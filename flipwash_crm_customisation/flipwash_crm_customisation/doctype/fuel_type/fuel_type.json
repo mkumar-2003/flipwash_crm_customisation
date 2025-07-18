@@ -1,0 +1,52 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "allow_rename": 1,
+  "autoname": "field:fuel_type",
+  "creation": "2025-07-13 22:39:09.132129",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "section_break_jmo3",
+    "fuel_type"
+  ],
+  "fields": [
+    {
+      "fieldname": "section_break_jmo3",
+      "fieldtype": "Section Break",
+      "label": "Fuel Type"
+    },
+    {
+      "fieldname": "fuel_type",
+      "fieldtype": "Data",
+      "label": "Fuel Type"
+    }
+  ],
+  "grid_page_length": 50,
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-07-13 22:39:09.132129",
+  "modified_by": "Administrator",
+  "module": "Flipwash Crm Customisation",
+  "name": "Fuel Type",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "row_format": "Dynamic",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
