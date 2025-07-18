@@ -31,3 +31,4 @@ def create_demo_data():
                 "vehicle_condition": condition
             })
             doc.insert(ignore_permissions=True)
+
