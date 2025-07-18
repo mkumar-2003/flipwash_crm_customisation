@@ -26,22 +26,26 @@ def notify_upcoming_bookings():
 		time_diff = system_now - new_datetime
 		one_hour = timedelta(hours=1)
 
-		if abs(time_diff) >= one_hour:
-			notification = frappe.get_doc({
-				"doctype": "Notification Log",
-				"subject": f"📅 Upcoming Booking: {lead.lead_name} at {new_datetime}",
-				"for_user": "Administrator",
-				"type": "Alert",
-				"document_type": "Lead",
-				"document_name": lead.name,
-				"from_user": "Administrator",
-				"email_content": (
-					f"Reminder: Booking for lead '{lead.lead_name}' "
-					f"is scheduled for {new_datetime}."
-				)
-			})
-			notification.insert(ignore_permissions=True)
-			frappe.db.commit()
+		booking_date = booking_dt.date()
+		system_date = datetime.now().date()
+		if booking_date == system_date:
+
+			if abs(time_diff) >= one_hour:
+				notification = frappe.get_doc({
+					"doctype": "Notification Log",
+					"subject": f"📅 Upcoming Booking: {lead.lead_name} at {new_datetime}",
+					"for_user": "Administrator",
+					"type": "Alert",
+					"document_type": "Lead",
+					"document_name": lead.name,
+					"from_user": "Administrator",
+					"email_content": (
+						f"Reminder: Booking for lead '{lead.lead_name}' "
+						f"is scheduled for {new_datetime}."
+					)
+				})
+				notification.insert(ignore_permissions=True)
+				frappe.db.commit()
 
 
 @frappe.whitelist()
