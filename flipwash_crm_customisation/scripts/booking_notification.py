@@ -99,29 +99,38 @@ def notify_upcoming_bookings():
 			notification.insert(ignore_permissions=True)
 			frappe.db.commit()
 
-
 @frappe.whitelist()
 def today_opportunity_booking_slot():
-	leads = frappe.get_all(
-		"Lead",
-		filters={"status": "Opportunity"},
-		fields=["name", "lead_name", "booking_slot"]
-	)
-	print(leads, "kkkkkkkkkkkkkkk")
-	count = 0
-	for lead in leads:
-		if isinstance(lead.booking_slot, datetime):
-			booking_dt = lead.booking_slot
-		else:
-			booking_dt = datetime.strptime(lead.booking_slot, "%Y-%m-%d %H:%M:%S")
+    system_date = datetime.now().date()
 
-		booking_date = booking_dt.date()
-		system_date = datetime.now().date()
+    leads = frappe.get_all(
+        "Lead",
+        filters={"status": "Opportunity"},
+        fields=["name", "lead_name", "booking_slot"]
+    )
 
-		if booking_date == system_date:
-			count += 1
-	return {
-		"value": count,
-		"fieldtype": "Int",
-		"route": ["List", "Lead", "List", {"status": "Opportunity"}]
-	}
+    today_leads = []
+    for lead in leads:
+        if not lead.booking_slot:
+            continue
+
+        # Convert string to datetime if necessary
+        if isinstance(lead.booking_slot, str):
+            booking_dt = datetime.strptime(lead.booking_slot, "%Y-%m-%d %H:%M:%S")
+        else:
+            booking_dt = lead.booking_slot
+
+        # Check if booking date is today
+        if booking_dt.date() == system_date:
+            today_leads.append(lead)
+
+    return {
+        "value": len(today_leads),
+        "fieldtype": "Int",
+        "route": ["List", "Lead", "List", {
+            "status": "Opportunity",
+            "booking_slot": [">=", f"{system_date} 00:00:00"]
+        }],
+        "label": "Today's Opportunity Bookings"
+    }
+
